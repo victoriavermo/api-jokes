@@ -19,14 +19,16 @@ body{
     text-align: center;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 20vh;
 }
 
 .content{
     position: relative;
+    text-align: center;
 }
 
 .left-col, .right-col{
-    padding: 10.8rem 8vw;
+    padding: 8.8rem 8vw;
 }
 
 h1{
@@ -56,6 +58,7 @@ button{
     cursor: pointer;
     letter-spacing: 2.5px;
     transition: all 0.3s ease 0s;
+    outline: none;
 }
 
 button:hover {
@@ -63,10 +66,40 @@ button:hover {
     box-shadow: 0px 15px 20px rgba(229, 171, 46, 0.4);
     color: white;
     transform: translateY(-7px);
-  }
+    outline: none;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align: center;
+}
+
+.weather{
+    color: rgba(0, 0, 0, 0.727);
+    font-size: 1.6rem;
+}
+.city{
+    font-weight: bold;
+}
+.max{
+    color: red;
+    opacity: 70%;
+}
+.min{
+    color: blue;
+    opacity: 70%;
+}
+.description{
+    text-transform: capitalize;
+}
+.temp{
+    font-weight: bold;
+}
 
 /*Desktop Version*/
-@media only screen and (min-width: 1260px){
+@media only screen and (min-width: 1200px){
     body{
         display: flex;
     }
@@ -83,13 +116,12 @@ button:hover {
         padding: 1em 4em;
     }
 
+    footer{
+        text-align: end;
+    }
+    .weather{
+        font-size: 1.8rem;
+        padding-right: calc(55% - 50%);
+    }
 
 }
-
-
-
-  
-
-
-
-
