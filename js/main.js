@@ -1,5 +1,5 @@
 const url = 'https://icanhazdadjoke.com/';
-var header = { 
+const header = { 
         headers: { Accept: "application/json" },
     };
 const jokeP = document.querySelector(".joke");    
@@ -7,7 +7,6 @@ const jokeP = document.querySelector(".joke");
 
 //Function that get the joke from de API.
 function getData(){
-
     fetch(url,header)
         .then(response => response.json())
         .then(data => showJoke(data.joke));
@@ -16,5 +15,6 @@ function getData(){
 //Function that prints the joke.
 function showJoke(joke){
     console.log(joke);
-    jokeP.innerText = joke;
+    jokeP.innerText = `" `+joke+` "`;
 }
+
