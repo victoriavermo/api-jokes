@@ -2,7 +2,7 @@
 
 ## Description
 Single page app made with HTML, JS and CSS. Integrates two API (jokes and current weather).
-Click [here](https://8uug3.csb.app/) to see the demo. 
+Click [here](https://b0r5f.csb.app/) to see the demo. 
 
 
 ## Screenshots
