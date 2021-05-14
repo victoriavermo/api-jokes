@@ -3,7 +3,9 @@ const url = 'https://icanhazdadjoke.com/';
 const header = { 
         headers: { Accept: "application/json" },
     };
+const url2 = 'https://friends-quotes-api.herokuapp.com/quotes/random';    
 const jokeP = document.querySelector(".joke");
+let flag = true;
 
 //Weather Variables
 const key = config.API_KEY;
@@ -18,15 +20,30 @@ const maxP = document.querySelector(".max");
 /* ---- EXERCICE 1 and 2: JOKE ---- */
 //Function that get the joke from de API.
 function getData(){
-   fetch(url,header)
+
+   if(flag){
+      fetch(url,header)
         .then(response => response.json())
-        .then(data => showJoke(data.joke));
+        .then(data => showJoke(data.joke));   
+   }else{
+        fetch(url2)
+            .then(response => response.json())
+            .then(data => showJoke(data));
+   } 
+   flag = !flag;
 }
 
 //Function that prints the joke.
 function showJoke(joke){
     console.log(joke);
-    jokeP.innerText = `" ${joke} "`;
+    if(!flag){
+        jokeP.innerText = `" ${joke} "`;
+    }else{
+        jokeP.innerHTML = `<q>${joke.quote}</q> <cite> - ${joke.character} (Firends TV Sitcom)</cite>`;
+    }
+    
+
+    
 }
 
 /* ---- EXERCICE 3: WEATHER ---- */
