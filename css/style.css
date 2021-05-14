@@ -80,32 +80,40 @@ footer{
     color: rgba(0, 0, 0, 0.727);
     font-size: 1.6rem;
 }
+
 .city{
     font-weight: bold;
 }
+
 .max{
     color: red;
     opacity: 70%;
 }
+
 .min{
     color: blue;
     opacity: 70%;
 }
+
 .description{
     text-transform: capitalize;
 }
+
 .temp{
     font-weight: bold;
 }
+
 cite{
     font-size: 1.8rem;
 }
 
 /*Desktop Version*/
 @media only screen and (min-width: 1200px){
+
     body{
         display: flex;
     }
+
     .left-col, .right-col{
         /*Each colum will fill the same */
         flex-basis: 0; 
@@ -122,6 +130,7 @@ cite{
     footer{
         text-align: end;
     }
+
     .weather{
         font-size: 1.8rem;
         padding-right: calc(55% - 50%);
